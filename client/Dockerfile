@@ -16,6 +16,7 @@ FROM nginx:alpine AS prod
 # COPY --from=builder  /app/dist   /var/www/html    --> not working ut in ec2 a single page works         
 # version2
 COPY --from=builder  /app/dist   /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
