@@ -6,14 +6,14 @@ export default function App() {
   const [items, setItems] = useState([]);
   const [input, setInput] = useState("");
 
-// eslint-disable-next-line no-undef
-// const API_BASE = process.env.REACT_APP_BASE_URL;
 
-  const API_BASE = "http://backend:7000";
-// const API_BASE = process.env.REACT_APP_API_BASE;
+  // const API_BASE = "http://backend:7000";
+  const API_BASE = "/api";
+
   const fetchItems = async () => {
     try {
-      const res = await axios.get(`${API_BASE}/api/show`);
+      // const res = await axios.get(`${API_BASE}/api/show`);
+      const res = await axios.get(`${API_BASE}/show`);
       console.log("FETCHED DATA →", res.data);
 
       // works for multiple backend formats
@@ -35,7 +35,11 @@ export default function App() {
     if (!input.trim()) return;
 
     try {
-      await axios.post(`${API_BASE}/api/add`, {
+      // await axios.post(`${API_BASE}/api/add`, {
+      //   name: input
+      // });
+
+       await axios.post(`${API_BASE}/add`, {
         name: input
       });
 
