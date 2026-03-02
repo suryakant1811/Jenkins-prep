@@ -10,7 +10,7 @@ export default function App() {
 // const API_BASE = process.env.REACT_APP_BASE_URL;
 
   const API_BASE = "http://backend:7000";
-const API_BASE = process.env.REACT_APP_API_BASE;
+// const API_BASE = process.env.REACT_APP_API_BASE;
   const fetchItems = async () => {
     try {
       const res = await axios.get(`${API_BASE}/api/show`);
