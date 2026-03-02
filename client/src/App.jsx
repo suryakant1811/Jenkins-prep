@@ -62,7 +62,7 @@ export default function App() {
 
         <section style={styles.hero}>
           <div>
-            <h1>Build Beautiful Interfaces</h1>
+            <h1>Build Beautiful Interfaces V1</h1>
             <p>Add values to backend and view stored data below.</p>
 
             <div style={styles.inputRow}>
