@@ -52,6 +52,9 @@ pipeline{
         stage("done"){
             steps{  sh 'echo byeeee'}
         }
+        stage("complete"){
+            steps{ sh 'completed successfully' }
+        }
     }
 
 }
