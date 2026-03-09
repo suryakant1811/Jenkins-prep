@@ -55,6 +55,28 @@ pipeline{
         stage("complete"){
             steps{ sh 'echo completed successfully' }
         }
+        stage("email notification"){
+            steps { sh 'echo adding the mail sysytem' }
+        }
     }
 
+   post {
+
+        success {
+            emailext(
+                subject: "Pipeline Success",
+                body: "Pipeline build SUCCESS",
+                to: "dummy181103@gmail.com"
+            )
+        }
+
+        failure {
+            emailext(
+                subject: "Pipeline Failed",
+                body: "Pipeline build FAILED",
+                to: "dummy181103@gmail.com"
+            )
+        }
+
+    }
 }
