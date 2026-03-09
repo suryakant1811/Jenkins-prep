@@ -53,7 +53,7 @@ pipeline{
             steps{  sh 'echo byeeee'}
         }
         stage("complete"){
-            steps{ sh 'completed successfully' }
+            steps{ sh 'echo completed successfully' }
         }
     }
 
