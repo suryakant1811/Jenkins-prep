@@ -56,7 +56,7 @@ pipeline{
             steps{ sh 'echo completed successfully' }
         }
         stage("email notification"){
-            steps { sh 'echo adding the mail sysytem now' }
+            steps { sh 'echo adding the mail sysytem test' }
         }
     }
 
