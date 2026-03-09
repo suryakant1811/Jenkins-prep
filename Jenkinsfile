@@ -47,10 +47,10 @@ pipeline{
 
     stages{
         stage("test"){
-            sh 'echo surya chala'
+            steps{sh 'echo surya chala'}
         }
         stage("done"){
-            sh 'byeeee'
+            steps{  sh 'byeeee'}
         }
     }
 
